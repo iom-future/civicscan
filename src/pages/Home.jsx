@@ -8,6 +8,7 @@ import IntelligenceLoop from '../components/sections/IntelligenceLoop';
 import Audience from '../components/sections/Audience';
 import CityIntelligence from '../components/sections/CityIntelligence';
 import Trust from '../components/sections/Trust';
+import Team from '../components/sections/Team';
 import PilotProgramme from '../components/sections/PilotProgramme';
 import FAQ from '../components/sections/FAQ';
 import FinalCTA from '../components/sections/FinalCTA';
@@ -32,6 +33,7 @@ export default function Home() {
         <Audience />
         <CityIntelligence />
         <Trust />
+        <Team />
         <PilotProgramme />
         <FAQ />
         <FinalCTA />

@@ -3,6 +3,7 @@ export const navLinks = [
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Capabilities', href: '#capabilities' },
   { label: "Who It's For", href: '#audience' },
+  { label: 'Team', href: '#team' },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -508,6 +509,125 @@ export const faqItems = [
     question: 'Can our organization participate in a pilot?',
     answer:
       'Yes. Organizations interested in evaluating CivicScan can register their interest through the pilot programme form.',
+  },
+];
+
+import damilolaImg from '../assets/images/team/damilola-olatunji.jpg';
+import kelechiImg from '../assets/images/team/kelechi-nwachukwu.jpg';
+import folashadeImg from '../assets/images/team/folashade-balogun.jpg';
+import ibrahimImg from '../assets/images/team/ibrahim-sanusi.jpg';
+import nnekaImg from '../assets/images/team/nneka-eze.jpg';
+import tundeImg from '../assets/images/team/tunde-adebayo.jpg';
+
+import babatundeImg from '../assets/images/testimonials/babatunde-adeleke.jpg';
+import aminaImg from '../assets/images/testimonials/amina-bello.jpg';
+import chineduImg from '../assets/images/testimonials/chinedu-okonkwo.jpg';
+
+export const testimonialsList = [
+  {
+    id: 'test-1',
+    author: 'Engr. Babatunde Adeleke, FNSE',
+    role: 'Director of Civil Infrastructure Maintenance',
+    organization: 'Lagos State Infrastructure Agency',
+    location: 'Lagos, Nigeria',
+    tag: 'MUNICIPAL ENGINEERING',
+    avatarInitials: 'BA',
+    image: babatundeImg,
+    quote:
+      'Before CivicScan, defect reporting arrived scattered through unverified social posts and informal calls. Having geo-tagged visual evidence and automated duplicate clustering cuts our inspection triage time in half.',
+  },
+  {
+    id: 'test-2',
+    author: 'Dr. Amina Bello',
+    role: 'Senior Urban Planning & Policy Advisor',
+    organization: 'Abuja Metropolitan Advisory Council',
+    location: 'Abuja, FCT',
+    tag: 'URBAN PLANNING',
+    avatarInitials: 'AB',
+    image: aminaImg,
+    quote:
+      'The spatial hotspot detection allows our municipal maintenance units to address drainage siltation and road pavement wear before the rainy season triggers severe structural failures and costly reconstruction.',
+  },
+  {
+    id: 'test-3',
+    author: 'Chinedu Okonkwo',
+    role: 'Operations & Maintenance Lead',
+    organization: 'Niger Delta Public Works Contractors Consortium',
+    location: 'Port Harcourt, Rivers',
+    tag: 'FIELD OPERATIONS',
+    avatarInitials: 'CO',
+    image: chineduImg,
+    quote:
+      'CivicScan closes the accountability loop between community reports and field contractors. Crews can upload geo-verified post-repair photographs that provide an auditable record of completed work.',
+  },
+];
+
+export const teamMembers = [
+  {
+    id: 'damilola',
+    name: 'Engr. Damilola Olatunji',
+    role: 'Co-Founder & Chief Executive Officer',
+    credentials: 'B.Eng Civil Engineering (Unilag) · MSc Urban Systems (Imperial)',
+    bio: '12+ years directing municipal infrastructure evaluations, public works contracts, and urban asset rehabilitation across Lagos and southwestern Nigeria.',
+    location: 'Lagos, Nigeria',
+    avatarInitials: 'DO',
+    image: damilolaImg,
+    tags: ['Urban Governance', 'Infrastructure Policy', 'Civil Engineering'],
+  },
+  {
+    id: 'kelechi',
+    name: 'Kelechi Nwachukwu',
+    role: 'Co-Founder & Chief Technology Officer',
+    credentials: 'B.Sc Computer Science (UNN) · Ex-Senior Computer Vision Lead',
+    bio: 'Machine learning architect specializing in edge computer vision models, automated defect localization, and spatial deduplication for African road conditions.',
+    location: 'Enugu / Lagos, Nigeria',
+    avatarInitials: 'KN',
+    image: kelechiImg,
+    tags: ['Computer Vision', 'Deep Learning', 'Distributed Systems'],
+  },
+  {
+    id: 'folashade',
+    name: 'Folashade Balogun',
+    role: 'Head of Product & Municipal Operations',
+    credentials: 'B.Sc Systems Engineering (FUTA) · PMP Certified',
+    bio: 'Seasoned civic-tech operator who has deployed field reporting systems and operational dispatch workflows for public agencies and urban service providers.',
+    location: 'Abuja, Nigeria',
+    avatarInitials: 'FB',
+    image: folashadeImg,
+    tags: ['GovTech', 'Product Operations', 'Field Workflows'],
+  },
+  {
+    id: 'ibrahim',
+    name: 'Ibrahim Sanusi',
+    role: 'Head of Geospatial Data & Intelligence',
+    credentials: 'B.Sc Surveying & Geoinformatics (ABU Zaria) · Fellow NIS',
+    bio: '10+ years in GIS spatial clustering, corridor degradation modeling, and municipal ward-level asset lifecycle mapping across northern and central Nigeria.',
+    location: 'Kaduna / Abuja, Nigeria',
+    avatarInitials: 'IS',
+    image: ibrahimImg,
+    tags: ['GIS & Spatial Analytics', 'Remote Sensing', 'Asset Mapping'],
+  },
+  {
+    id: 'nneka',
+    name: 'Dr. Nneka Eze',
+    role: 'Head of Urban Resilience & Climate Analytics',
+    credentials: 'Ph.D Urban Hydrology (Uniport) · B.Eng Civil Engineering (UNN)',
+    bio: 'Specialist in stormwater infrastructure resilience, watershed modeling, and seasonal drainage failure forecasting across coastal and riverine Nigerian cities.',
+    location: 'Port Harcourt, Nigeria',
+    avatarInitials: 'NE',
+    image: nnekaImg,
+    tags: ['Flood Resilience', 'Stormwater Systems', 'Climate Analytics'],
+  },
+  {
+    id: 'tunde',
+    name: 'Engr. Tunde Adebayo',
+    role: 'Lead Infrastructure & Field Systems Engineer',
+    credentials: 'B.Sc Electrical Engineering (UI) · Certified IoT Systems Architect',
+    bio: 'Oversees field inspector mobile reporting telemetry, rugged street-asset sensor integration, and offline-first edge synchronization in low-connectivity zones.',
+    location: 'Ibadan / Lagos, Nigeria',
+    avatarInitials: 'TA',
+    image: tundeImg,
+    tags: ['Edge Telemetry', 'Field Systems', 'IoT Infrastructure'],
   },
 ];
 

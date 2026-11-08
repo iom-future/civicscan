@@ -6,11 +6,14 @@ import {
   HardHat,
   Users,
   Smartphone,
+  Quote,
+  Star,
+  ShieldCheck,
 } from 'lucide-react';
 import Container from '../layout/Container';
 import SectionHeader from '../layout/SectionHeader';
 import Reveal from '../ui/Reveal';
-import { audiencesList } from '../../data/siteData';
+import { audiencesList, testimonialsList } from '../../data/siteData';
 import inspectionImg from '../../assets/images/infrastructure-inspection.jpg';
 import maintenanceImg from '../../assets/images/urban-maintenance.jpg';
 
@@ -153,6 +156,82 @@ export default function Audience() {
             );
           })}
         </Reveal>
+
+        {/* Testimonials Subsection: Field & Municipal Perspectives */}
+        <div id="testimonials" className="mt-16 pt-16 border-t border-slate-200">
+          <Reveal>
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold tracking-wider text-[#3978E8] uppercase">
+                <span>Field & Municipal Perspectives</span>
+                <span className="inline-block h-1 w-1 rounded-full bg-[#3978E8]" />
+                <span className="text-[#68788D]">Nigeria Deployments</span>
+              </div>
+              <h3 className="mt-2.5 font-heading text-2xl font-semibold text-[#142235] sm:text-3xl">
+                Built With Input From Field Engineers and City Planners.
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-[#68788D] sm:text-base">
+                Observations from Nigerian public works directors, civil engineers, and infrastructure contractors shaping our workflow design.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal
+            stagger={0.08}
+            className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3"
+          >
+            {testimonialsList.map((item) => (
+              <div
+                key={item.id}
+                className="group flex flex-col justify-between rounded-md border border-slate-200 bg-white p-6 transition-all duration-200 hover:border-[#3978E8] hover:shadow-sm"
+              >
+                <div>
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                    <span className="font-mono text-[10px] font-semibold tracking-wider text-[#3978E8] uppercase bg-[#3978E8]/8 px-2.5 py-0.5 rounded">
+                      {item.tag}
+                    </span>
+                  </div>
+
+                  <div className="relative mt-4">
+                    <Quote className="h-6 w-6 text-[#3978E8]/20 mb-2" />
+                    <p className="text-sm leading-relaxed text-[#142235] italic">
+                      &ldquo;{item.quote}&rdquo;
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-6 flex items-center gap-3.5 border-t border-slate-100 pt-4">
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border-2 border-[#55D3BD]/40 bg-[#101C2C] shadow-xs group-hover:scale-105 transition-transform duration-200">
+                    {item.image ? (
+                      <img
+                        src={item.image}
+                        alt={item.author}
+                        width="48"
+                        height="48"
+                        loading="lazy"
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center font-mono text-xs font-semibold text-[#55D3BD]">
+                        {item.avatarInitials}
+                      </div>
+                    )}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-heading text-sm font-semibold text-[#142235] truncate group-hover:text-[#3978E8] transition-colors">
+                      {item.author}
+                    </h4>
+                    <p className="text-xs text-[#68788D] truncate">
+                      {item.role}
+                    </p>
+                    <p className="font-mono text-[10px] text-[#3978E8] truncate">
+                      {item.organization} · {item.location}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Reveal>
+        </div>
       </Container>
     </section>
   );
