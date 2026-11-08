@@ -86,7 +86,7 @@ export default function Problem() {
             </Reveal>
           </div>
 
-          {/* Right Column: Editorial Numbered Dossier Ledger */}
+          {/* Right Column: Editorial Dossier Ledger */}
           <div className="lg:col-span-7 flex flex-col justify-between">
             <Reveal
               stagger={0.1}
@@ -96,39 +96,31 @@ export default function Problem() {
                 const IconComponent = iconMap[item.iconName] || AlertTriangle;
                 return (
                   <div
-                    key={item.number}
+                    key={item.title}
                     className="group relative p-6 sm:p-8 transition-colors duration-200 hover:bg-[#F8FAFC]"
                   >
-                    <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
-                      {/* Number & Icon Column */}
-                      <div className="flex items-center sm:flex-col sm:items-start justify-between gap-3 shrink-0">
-                        <span className="font-mono text-xs font-semibold tracking-widest text-[#3978E8] bg-[#3978E8]/8 px-2.5 py-1 rounded">
-                          {item.number}
-                        </span>
-                        <div className="flex h-10 w-10 items-center justify-center rounded border border-slate-200 bg-[#F4F7FA] text-[#142235] transition-colors group-hover:border-[#3978E8] group-hover:text-[#3978E8]">
-                          <IconComponent className="h-5 w-5" />
-                        </div>
-                      </div>
-
-                      {/* Text Content */}
-                      <div className="flex-1">
-                        <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex flex-col">
+                      <div className="flex flex-wrap items-center justify-between gap-3">
+                        <div className="flex items-center gap-3">
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded border border-slate-200 bg-[#F4F7FA] text-[#142235] transition-colors group-hover:border-[#3978E8] group-hover:text-[#3978E8]">
+                            <IconComponent className="h-5 w-5" />
+                          </div>
                           <h3 className="font-heading text-xl font-semibold text-[#142235] group-hover:text-[#3978E8] transition-colors">
-                            {item.number} — {item.title}
+                            {item.title}
                           </h3>
-                          <span className="font-mono text-[10px] font-medium tracking-wider text-[#68788D] uppercase border border-slate-200 bg-[#F4F7FA] px-2 py-0.5 rounded">
-                            {item.metricLabel}
-                          </span>
                         </div>
-
-                        <p className="mt-2.5 text-base leading-relaxed text-[#68788D]">
-                          {item.description}
-                        </p>
-
-                        <p className="mt-3 pt-3 border-t border-slate-100 text-xs text-[#68788D] font-mono">
-                          {item.metricDetail}
-                        </p>
+                        <span className="font-mono text-[10px] font-medium tracking-wider text-[#68788D] uppercase border border-slate-200 bg-[#F4F7FA] px-2 py-0.5 rounded">
+                          {item.metricLabel}
+                        </span>
                       </div>
+
+                      <p className="mt-3 text-base leading-relaxed text-[#68788D]">
+                        {item.description}
+                      </p>
+
+                      <p className="mt-3 pt-3 border-t border-slate-100 text-xs text-[#68788D] font-mono">
+                        {item.metricDetail}
+                      </p>
                     </div>
                   </div>
                 );

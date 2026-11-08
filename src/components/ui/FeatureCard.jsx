@@ -213,20 +213,16 @@ export default function FeatureCard({ capability }) {
       }`}
     >
       <div>
-        <div className="flex items-center justify-between">
-          <span className="font-mono text-xs font-semibold tracking-wider text-[#3978E8]">
-            CAPABILITY {capability.number}
-          </span>
-          <div className="flex h-9 w-9 items-center justify-center rounded border border-slate-200 bg-[#F4F7FA] text-[#142235] transition-colors group-hover:border-[#3978E8] group-hover:bg-[#3978E8] group-hover:text-white">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-slate-200 bg-[#F4F7FA] text-[#142235] transition-colors group-hover:border-[#3978E8] group-hover:bg-[#3978E8] group-hover:text-white">
             <IconComponent className="h-4.5 w-4.5" />
           </div>
+          <h3 className="font-heading text-xl font-semibold text-[#142235] sm:text-2xl">
+            {capability.title}
+          </h3>
         </div>
 
-        <h3 className="mt-4 font-heading text-xl font-semibold text-[#142235] sm:text-2xl">
-          {capability.number} — {capability.title}
-        </h3>
-
-        <p className="mt-2.5 text-base leading-relaxed text-[#68788D]">
+        <p className="mt-3 text-base leading-relaxed text-[#68788D]">
           {capability.description}
         </p>
       </div>

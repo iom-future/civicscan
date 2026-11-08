@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
+import { Camera, Scan, Sliders, CheckCircle2 } from 'lucide-react';
 import Container from '../layout/Container';
 import SectionHeader from '../layout/SectionHeader';
 import ReportCard from '../ui/ReportCard';
 import Reveal from '../ui/Reveal';
 import { workflowStages } from '../../data/siteData';
+
+const stageIcons = {
+  Report: Camera,
+  Analyze: Scan,
+  Prioritize: Sliders,
+  'Resolve & Monitor': CheckCircle2,
+};
 
 export default function HowItWorks() {
   const [activeStage, setActiveStage] = useState(0);
@@ -29,9 +37,10 @@ export default function HowItWorks() {
         >
           {workflowStages.map((item, idx) => {
             const isActive = activeStage === idx;
+            const StageIcon = stageIcons[item.stage] || CheckCircle2;
             return (
               <button
-                key={item.number}
+                key={item.stage}
                 type="button"
                 onClick={() => setActiveStage(idx)}
                 aria-pressed={isActive}
@@ -42,31 +51,34 @@ export default function HowItWorks() {
                 }`}
               >
                 <div>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2.5">
+                      <div
+                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded border transition-colors ${
+                          isActive
+                            ? 'border-[#3978E8] bg-[#15253A] text-[#55D3BD]'
+                            : 'border-slate-200 bg-white text-[#142235] group-hover:border-[#3978E8] group-hover:text-[#3978E8]'
+                        }`}
+                      >
+                        <StageIcon className="h-4 w-4" />
+                      </div>
+                      <h3
+                        className={`font-heading text-lg font-semibold ${
+                          isActive ? 'text-white' : 'text-[#142235]'
+                        }`}
+                      >
+                        {item.stage}
+                      </h3>
+                    </div>
                     <span
-                      className={`font-mono text-xs font-semibold tracking-wider ${
-                        isActive ? 'text-[#55D3BD]' : 'text-[#3978E8]'
-                      }`}
-                    >
-                      {item.number} — {item.stage.toUpperCase()}
-                    </span>
-                    <span
-                      className={`h-2 w-2 rounded-full ${
+                      className={`h-2 w-2 shrink-0 rounded-full ${
                         isActive ? 'bg-[#55D3BD]' : 'bg-slate-300'
                       }`}
                     />
                   </div>
 
-                  <h3
-                    className={`mt-3 font-heading text-lg font-semibold ${
-                      isActive ? 'text-white' : 'text-[#142235]'
-                    }`}
-                  >
-                    {item.number} — {item.stage}
-                  </h3>
-
                   <p
-                    className={`mt-2 text-sm leading-relaxed ${
+                    className={`mt-3 text-sm leading-relaxed ${
                       isActive ? 'text-slate-300' : 'text-[#68788D]'
                     }`}
                   >
