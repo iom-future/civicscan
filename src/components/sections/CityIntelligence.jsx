@@ -40,20 +40,16 @@ export default function CityIntelligence() {
                 key={area.id}
                 className="rounded-md border border-[#22354E] bg-[#15253A]/90 p-6 transition-colors hover:border-[#6B9CFF]/60"
               >
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-semibold text-[#55D3BD]">
-                    0{idx + 1} — INTELLIGENCE LAYER
-                  </span>
-                  <div className="flex h-9 w-9 items-center justify-center rounded border border-[#283E5C] bg-[#101C2C] text-[#6B9CFF]">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-[#283E5C] bg-[#101C2C] text-[#6B9CFF]">
                     <IconComponent className="h-4.5 w-4.5" />
                   </div>
+                  <h3 className="font-heading text-xl font-semibold text-white">
+                    {area.title}
+                  </h3>
                 </div>
 
-                <h3 className="mt-4 font-heading text-xl font-semibold text-white">
-                  {area.title}
-                </h3>
-
-                <p className="mt-2.5 text-sm leading-relaxed text-slate-300 sm:text-base">
+                <p className="mt-3 text-sm leading-relaxed text-slate-300 sm:text-base">
                   {area.description}
                 </p>
               </div>

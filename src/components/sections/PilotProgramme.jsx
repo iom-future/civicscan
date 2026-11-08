@@ -7,7 +7,6 @@ import {
   AlertCircle,
   Loader2,
   ArrowRight,
-  Terminal,
 } from 'lucide-react';
 import Container from '../layout/Container';
 import SectionHeader from '../layout/SectionHeader';
@@ -182,25 +181,6 @@ export default function PilotProgramme() {
               </div>
             </Reveal>
 
-            {/* Configurable Endpoint Status Note */}
-            <Reveal delay={0.15} className="mt-5">
-              <div className="rounded-md border border-slate-200 bg-white/80 p-4 text-xs text-[#68788D]">
-                <div className="flex items-center gap-2 font-mono text-[11px] font-medium text-[#142235]">
-                  <Terminal className="h-3.5 w-3.5 text-[#3978E8]" />
-                  <span>API Integration Status</span>
-                </div>
-                <p className="mt-1 leading-relaxed">
-                  Form submissions connect to{' '}
-                  <code className="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[11px] text-[#142235]">
-                    VITE_CIVICSCAN_API_URL
-                  </code>
-                  .{' '}
-                  {apiUrl
-                    ? 'Active endpoint configured.'
-                    : 'No endpoint currently configured in environment; submissions will validate and report configuration status without faking persistence.'}
-                </p>
-              </div>
-            </Reveal>
           </div>
 
           {/* Right 7 Cols: Pilot Registration Form */}

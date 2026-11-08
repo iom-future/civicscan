@@ -168,22 +168,15 @@ export default function IntelligenceLoop() {
               `}
             >
               <div className="flex items-center justify-between">
-                <span
-                  className={`font-mono text-xs font-semibold ${
-                    activeIndex === 0 ? 'text-[#55D3BD]' : 'text-[#3978E8]'
-                  }`}
-                >
-                  01 — OBSERVE
-                </span>
+                <h3 className="font-heading text-base font-semibold">
+                  {intelligenceLoopStages[0].title}
+                </h3>
                 <span className="font-mono text-[10px] opacity-75">
                   INPUT LAYER
                 </span>
               </div>
-              <h3 className="mt-1 font-heading text-base font-semibold">
-                01 — {intelligenceLoopStages[0].title}
-              </h3>
               <p
-                className={`mt-1 text-xs leading-relaxed ${
+                className={`mt-1.5 text-xs leading-relaxed ${
                   activeIndex === 0 ? 'text-slate-300' : 'text-[#68788D]'
                 }`}
               >
@@ -204,22 +197,15 @@ export default function IntelligenceLoop() {
               `}
             >
               <div className="flex items-center justify-between">
-                <span
-                  className={`font-mono text-xs font-semibold ${
-                    activeIndex === 1 ? 'text-[#55D3BD]' : 'text-[#3978E8]'
-                  }`}
-                >
-                  02 — UNDERSTAND
-                </span>
+                <h3 className="font-heading text-base font-semibold">
+                  {intelligenceLoopStages[1].title}
+                </h3>
                 <span className="font-mono text-[10px] opacity-75">
                   AI TRIAGE
                 </span>
               </div>
-              <h3 className="mt-1 font-heading text-base font-semibold">
-                02 — {intelligenceLoopStages[1].title}
-              </h3>
               <p
-                className={`mt-1 text-xs leading-relaxed ${
+                className={`mt-1.5 text-xs leading-relaxed ${
                   activeIndex === 1 ? 'text-slate-300' : 'text-[#68788D]'
                 }`}
               >
@@ -240,22 +226,15 @@ export default function IntelligenceLoop() {
               `}
             >
               <div className="flex items-center justify-between">
-                <span
-                  className={`font-mono text-xs font-semibold ${
-                    activeIndex === 2 ? 'text-[#55D3BD]' : 'text-[#3978E8]'
-                  }`}
-                >
-                  03 — ACT
-                </span>
+                <h3 className="font-heading text-base font-semibold">
+                  {intelligenceLoopStages[2].title}
+                </h3>
                 <span className="font-mono text-[10px] opacity-75">
                   OPERATIONS
                 </span>
               </div>
-              <h3 className="mt-1 font-heading text-base font-semibold">
-                03 — {intelligenceLoopStages[2].title}
-              </h3>
               <p
-                className={`mt-1 text-xs leading-relaxed ${
+                className={`mt-1.5 text-xs leading-relaxed ${
                   activeIndex === 2 ? 'text-slate-300' : 'text-[#68788D]'
                 }`}
               >
@@ -276,22 +255,15 @@ export default function IntelligenceLoop() {
               `}
             >
               <div className="flex items-center justify-between">
-                <span
-                  className={`font-mono text-xs font-semibold ${
-                    activeIndex === 3 ? 'text-[#55D3BD]' : 'text-[#3978E8]'
-                  }`}
-                >
-                  04 — LEARN
-                </span>
+                <h3 className="font-heading text-base font-semibold">
+                  {intelligenceLoopStages[3].title}
+                </h3>
                 <span className="font-mono text-[10px] opacity-75">
                   MEMORY LOOP
                 </span>
               </div>
-              <h3 className="mt-1 font-heading text-base font-semibold">
-                04 — {intelligenceLoopStages[3].title}
-              </h3>
               <p
-                className={`mt-1 text-xs leading-relaxed ${
+                className={`mt-1.5 text-xs leading-relaxed ${
                   activeIndex === 3 ? 'text-slate-300' : 'text-[#68788D]'
                 }`}
               >
@@ -318,20 +290,17 @@ export default function IntelligenceLoop() {
           <div className="relative pl-6 before:absolute before:top-3 before:bottom-3 before:left-2.5 before:w-0.5 before:bg-[#3978E8]/40 space-y-4">
             {intelligenceLoopStages.map((stage) => (
               <div
-                key={stage.number}
+                key={stage.title}
                 className="relative rounded-md border border-slate-200 bg-white p-5 shadow-2xs"
               >
                 <span className="absolute -left-[21px] top-6 h-3 w-3 rounded-full border-2 border-white bg-[#3978E8]" />
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-semibold text-[#3978E8]">
-                    STAGE {stage.number}
-                  </span>
-                  <span className="font-mono text-[10px] text-[#68788D]">
+                  <span className="font-mono text-[10px] font-semibold text-[#3978E8] uppercase tracking-wider">
                     {stage.metric}
                   </span>
                 </div>
                 <h3 className="mt-1.5 font-heading text-lg font-semibold text-[#142235]">
-                  {stage.number} — {stage.title}
+                  {stage.title}
                 </h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-[#68788D]">
                   {stage.description}
