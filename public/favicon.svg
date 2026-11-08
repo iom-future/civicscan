@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <rect width="36" height="36" rx="8" fill="#101C2C"/>
+  <!-- Outer infrastructure grid frame -->
+  <path d="M9 14V11C9 9.89543 9.89543 9 11 9H14" stroke="#3978E8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M22 9H25C26.1046 9 27 9.89543 27 11V14" stroke="#3978E8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M27 22V25C27 26.1046 26.1046 27 25 27H22" stroke="#3978E8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M14 27H11C9.89543 27 9 26.1046 9 25V22" stroke="#3978E8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Inner geospatial node & road intersection -->
+  <line x1="18" y1="9" x2="18" y2="14" stroke="#6B9CFF" stroke-width="1.5"/>
+  <line x1="18" y1="22" x2="18" y2="27" stroke="#6B9CFF" stroke-width="1.5"/>
+  <line x1="9" y1="18" x2="14" y2="18" stroke="#6B9CFF" stroke-width="1.5"/>
+  <line x1="22" y1="18" x2="27" y2="18" stroke="#6B9CFF" stroke-width="1.5"/>
+  <!-- Observation pulse center -->
+  <circle cx="18" cy="18" r="4" fill="#55D3BD"/>
+  <circle cx="18" cy="18" r="1.5" fill="#101C2C"/>
+</svg>
