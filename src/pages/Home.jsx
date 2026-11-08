@@ -23,7 +23,7 @@ export default function Home() {
         Skip to main content
       </a>
       <Navbar />
-      <main id="main-content" className="flex-1">
+      <main id="main-content" className="flex-1 pt-16 sm:pt-[70px]">
         <Hero />
         <Problem />
         <HowItWorks />

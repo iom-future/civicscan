@@ -54,18 +54,18 @@ export default function Navbar() {
   return (
     <header
       ref={headerRef}
-      className={`sticky top-0 z-50 w-full transition-colors duration-200 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-colors duration-200 ${
         scrolled
           ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-[0_1px_2px_rgba(16,28,44,0.03)]'
           : 'bg-white border-b border-slate-200/70'
       }`}
     >
-      <Container>
+      <div className="mx-auto w-full max-w-[1360px] min-[900px]:max-w-none px-4 sm:px-6 min-[900px]:px-8 lg:px-12">
         <div className="flex h-16 items-center justify-between sm:h-[70px]">
           <a
             href="#top"
             onClick={handleLinkClick}
-            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3978E8] rounded"
+            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3978E8] rounded shrink-0"
             aria-label="CivicScan Home"
           >
             <CivicScanLogo variant="dark" />
@@ -74,7 +74,7 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav
             aria-label="Primary Navigation"
-            className="hidden md:flex md:items-center md:gap-7 lg:gap-9"
+            className="hidden min-[900px]:flex min-[900px]:items-center min-[900px]:gap-6 lg:gap-8 xl:gap-9"
           >
             {navLinks.map((item) => (
               <a
@@ -88,7 +88,7 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex md:items-center md:gap-3">
+          <div className="hidden min-[900px]:flex min-[900px]:items-center min-[900px]:gap-3 shrink-0">
             <Button
               href="#pilot-programme"
               variant="navy"
@@ -100,7 +100,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Hamburger Trigger */}
-          <div className="flex md:hidden">
+          <div className="flex min-[900px]:hidden">
             <button
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -117,16 +117,16 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      </Container>
+      </div>
 
       {/* Mobile Navigation Drawer */}
       <div
         id="mobile-nav-drawer"
-        className={`md:hidden overflow-hidden border-t border-slate-200 bg-white transition-all duration-250 ease-out ${
-          mobileMenuOpen ? 'max-h-[420px] opacity-100' : 'max-h-0 opacity-0 border-t-0'
+        className={`min-[900px]:hidden overflow-hidden border-t border-slate-200 bg-white transition-all duration-250 ease-out ${
+          mobileMenuOpen ? 'max-h-[420px] opacity-100 shadow-lg' : 'max-h-0 opacity-0 border-t-0'
         }`}
       >
-        <Container className="py-5">
+        <div className="px-4 py-5 sm:px-6">
           <nav aria-label="Mobile Navigation" className="flex flex-col space-y-1">
             {navLinks.map((item) => (
               <a
@@ -152,7 +152,7 @@ export default function Navbar() {
               Partner With Us
             </Button>
           </div>
-        </Container>
+        </div>
       </div>
     </header>
   );
