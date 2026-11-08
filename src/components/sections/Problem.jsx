@@ -48,6 +48,7 @@ export default function Problem() {
                     width="800"
                     height="500"
                     loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
                   />
                   <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between rounded bg-[#101C2C]/90 px-3 py-1.5 backdrop-blur-xs">
@@ -69,6 +70,7 @@ export default function Problem() {
                     width="400"
                     height="250"
                     loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover"
                   />
                 </div>

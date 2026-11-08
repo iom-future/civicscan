@@ -6,6 +6,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    chunkSizeWarningLimit: 650,
+    cssCodeSplit: true,
+    chunkSizeWarningLimit: 800,
   },
 })

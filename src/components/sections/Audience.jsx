@@ -70,6 +70,7 @@ export default function Audience() {
                 width="720"
                 height="450"
                 loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
               />
               <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between rounded bg-[#101C2C]/90 px-3.5 py-2 text-white backdrop-blur-xs">
@@ -97,6 +98,7 @@ export default function Audience() {
                 width="720"
                 height="450"
                 loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
               />
               <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between rounded bg-[#101C2C]/90 px-3.5 py-2 text-white backdrop-blur-xs">
@@ -208,6 +210,7 @@ export default function Audience() {
                         width="48"
                         height="48"
                         loading="lazy"
+                        decoding="async"
                         className="h-full w-full object-cover"
                       />
                     ) : (

@@ -97,6 +97,7 @@ export default function ReportCard({ activeStageIndex = 0, stageData }) {
               width="480"
               height="360"
               loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover transition-all duration-300"
             />
 

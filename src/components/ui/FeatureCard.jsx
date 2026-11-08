@@ -34,6 +34,7 @@ function VisionAssessmentPreview() {
             width="420"
             height="260"
             loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover"
           />
           {/* Simulated Detection Frame */}

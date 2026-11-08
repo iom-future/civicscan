@@ -121,6 +121,7 @@ export default function Hero() {
                     alt="Aerial photograph of a modern African city showing arterial roads and surrounding urban buildings"
                     width="192"
                     height="128"
+                    loading="eager"
                     fetchPriority="high"
                     className="h-full w-full object-cover"
                   />

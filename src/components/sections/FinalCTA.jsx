@@ -17,6 +17,7 @@ export default function FinalCTA() {
           width="1440"
           height="720"
           loading="lazy"
+          decoding="async"
           className="h-full w-full object-cover opacity-22 mix-blend-luminosity"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#101C2C] via-[#101C2C]/92 to-[#101C2C]/80" />
